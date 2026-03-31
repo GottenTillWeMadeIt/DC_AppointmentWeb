@@ -41,6 +41,7 @@ Backend Functionality
 ---
 
 Homepage Preview
+
 ![Homepage Preview](assets/screenshots/Homepage.jpg)
 
 **Device Compatibility:**
