@@ -1,0 +1,344 @@
+/* ========================================
+   R.L. Anino Dental Clinic - Clean Styles
+   Bootstrap 5.3 + Minimal Custom CSS
+   ======================================== */
+
+/* ───────── CSS Variables ───────── */
+:root {
+  --logo-primary: #008080;
+  --logo-primary-light: #e0f7f7;
+  --logo-accent: #006666;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+}
+
+/* ───────── Base Reset ───────── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--logo-primary-light), #c0e8e8);
+  color: var(--text-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ───────── Navbar (Simple & Responsive) ───────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  background: white !important;
+  border-bottom: 1px solid var(--logo-primary-light);
+  box-shadow: 0 2px 12px rgba(0, 128, 128, 0.1);
+  padding: 0.75rem 0;
+}
+
+.navbar-brand {
+  color: var(--logo-primary) !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-brand img {
+  width: 40px !important;
+  height: 40px !important;
+  border: 2px solid var(--logo-primary);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Nav links */
+.nav-link {
+  color: var(--logo-primary) !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.9rem !important;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: white !important;
+  background: var(--logo-primary);
+  transform: translateY(-1px);
+}
+
+/* Dropdown menus */
+.dropdown-menu {
+  border: 1px solid var(--logo-primary-light);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 128, 128, 0.15);
+  padding: 0.5rem 0;
+  margin-top: 8px;
+}
+
+.dropdown-header {
+  font-weight: 600;
+  color: var(--logo-accent);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  padding: 0.5rem 1.25rem;
+  background: rgba(0, 128, 128, 0.05);
+}
+
+.dropdown-item {
+  padding: 0.6rem 1.25rem;
+  color: var(--text-dark) !important;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background: rgba(0, 128, 128, 0.1) !important;
+  color: var(--logo-accent) !important;
+}
+
+/* Mobile navbar */
+@media (max-width: 991px) {
+  .navbar-brand { font-size: 1rem; }
+  .navbar-collapse {
+    background: white;
+    border-radius: 0 0 16px 16px;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    box-shadow: 0 8px 25px rgba(0, 128, 128, 0.1);
+  }
+  .dropdown-menu {
+    position: static !important;
+    border: none;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+  .dropdown-item { padding: 0.75rem 2rem; }
+}
+
+/* ───────── Hero Carousel (Mobile-First) ───────── */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  max-height: 800px;
+  overflow: hidden;
+}
+
+.hero .carousel-item {
+  height: 100%;
+}
+
+.hero .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,102,102,0.85), rgba(0,128,128,0.7));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content .lead {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin-bottom: 2rem;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 12%;
+  min-width: 40px;
+  opacity: 0.9;
+  z-index: 3;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 1;
+  background: rgba(0, 128, 128, 0.3);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Mobile carousel adjustments */
+@media (max-width: 767px) {
+  .hero { height: 90vh; min-height: 450px; }
+  .carousel-control-prev,
+  .carousel-control-next { width: 20%; }
+}
+
+/* ───────── Buttons (Hover + Cursor Fixed) ───────── */
+.btn-primary,
+.btn-book,
+.hero-btn {
+  background: var(--logo-primary) !important;
+  color: white !important;
+  border: none;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0, 128, 128, 0.3);
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.btn-primary:hover,
+.btn-book:hover,
+.hero-btn:hover {
+  background: var(--logo-accent) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 102, 102, 0.45);
+  color: white !important;
+}
+
+/* Ensure ALL clickable elements show hand cursor */
+a[href], button, [role="button"], .nav-link, .dropdown-item, .btn {
+  cursor: pointer;
+}
+
+/* ───────── Sections ───────── */
+.section { padding: 60px 0; }
+.section.bg-white { background: white !important; }
+.section.bg-light { background: var(--logo-primary-light) !important; }
+
+/* Service cards */
+.service-card {
+  border-radius: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 35px rgba(0, 128, 128, 0.2) !important;
+}
+
+.service-card .rounded-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge.bg-teal { background: var(--logo-primary) !important; }
+
+/* About section image */
+.about-img {
+  border: 3px solid var(--logo-primary-light);
+  border-radius: 16px;
+  background: transparent;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 128, 128, 0.1);
+  transition: transform 0.25s ease;
+}
+
+.card:hover { transform: translateY(-3px); }
+
+.card-body h5 {
+  color: var(--logo-accent);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ───────── Footer ───────── */
+footer {
+  background: var(--text-dark);
+  color: white;
+  padding: 40px 0 30px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer a { color: var(--logo-primary-light); text-decoration: none; }
+footer a:hover { color: white; text-decoration: underline; }
+
+footer .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  margin: 0 5px;
+  transition: background 0.25s ease;
+}
+
+footer .social-links a:hover {
+  background: var(--logo-primary);
+  transform: translateY(-2px);
+}
+
+/* ───────── Utilities ───────── */
+.text-teal { color: var(--logo-primary) !important; }
+.bg-teal { background: var(--logo-primary) !important; }
+.fw-bold { font-weight: 700 !important; }
+
+/* ───────── Mobile Adjustments ───────── */
+@media (max-width: 767px) {
+  .section { padding: 45px 0; }
+  .hero-content h1 { font-size: 1.7rem; }
+  .hero-content .lead { font-size: 1.05rem; }
+  .btn-primary, .btn-book, .hero-btn {
+    padding: 11px 24px;
+    font-size: 0.95rem;
+  }
+  .card-body { padding: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  .navbar-brand { font-size: 0.95rem; }
+  .hero-content { padding: 1.5rem 0.5rem; }
+  .hero-content h1 { font-size: 1.5rem; }
+}
+
+/* ───────── Print Styles ───────── */
+@media print {
+  .navbar, .hero, footer { display: none !important; }
+  body { background: white; color: black; }
+  .section { padding: 15px 0; }
+}

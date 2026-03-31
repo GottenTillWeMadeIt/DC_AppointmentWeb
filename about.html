@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - Dental Clinic</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/Icon/DC_MLogo.png">
+  <link rel="apple-touch-icon" href="assets/Icon/DC_MLogo.png">
+
+  <!-- CSS - Fixed: Removed extra spaces in URLs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+   <style>
+    /* Sticky Footer Styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      margin-top: auto;
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .policy-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #008080;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+  </style>
+
+
+<!-- ✅ Navbar: Simple, Responsive, Working -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    
+    <!-- Brand: Logo + Clinic Name (responsive) -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/Icon/DC_MLogo.png" alt="Logo" width="40" height="40" class="me-2">
+      <!-- Short on mobile, full on desktop -->
+      <span class="fw-bold text-teal d-inline d-md-none">Dental Clinic</span>
+      <span class="fw-bold text-teal d-none d-md-inline">Dental Clinic Appointment System</span>
+    </a>
+
+    <!-- Hamburger Toggle -->
+    <button 
+      class="navbar-toggler border-0" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        
+        <!-- About Dropdown (unchanged) -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown">
+    About Us
+  </a>
+  <ul class="dropdown-menu border-0 shadow-sm">
+    <li><h6 class="dropdown-header">Clinic Overview</h6></li>
+    <li><a class="dropdown-item" href="about.html">Our Story</a></li>
+    <li><a class="dropdown-item" href="about.html#mission">Mission</a></li>
+    <li><a class="dropdown-item" href="about.html#vision">Vision</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header">Our Team</h6></li>
+    <li><a class="dropdown-item" href="about.html#dentist">Dr. R.L. Anino</a></li>
+    <li><a class="dropdown-item" href="about.html#receptionist">Maria Santos</a></li>
+  </ul>
+</li>
+
+<!-- ✅ Services Dropdown (Now Matches About Us Style) -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown">
+    Services
+  </a>
+  <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navbarDropdownServices">
+    <li><h6 class="dropdown-header"><i class="bi bi-brush me-1"></i> Preventive Care</h6></li>
+    <li><a class="dropdown-item" href="services.html#dental-cleaning">Dental Cleaning</a></li>
+    <li><a class="dropdown-item" href="services.html#dental-checkup">Dental Check-Up</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header"><i class="bi bi-tooth me-1"></i> Restorative Care</h6></li>
+    <li><a class="dropdown-item" href="services.html#tooth-filling">Tooth Filling</a></li>
+    <li><a class="dropdown-item" href="services.html#tooth-extraction">Tooth Extraction</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header"><i class="bi bi-brightness-high me-1"></i> Cosmetic & Orthodontic</h6></li>
+    <li><a class="dropdown-item" href="services.html#teeth-whitening">Teeth Whitening</a></li>
+    <li><a class="dropdown-item" href="services.html#orthodontic">Orthodontic Treatment</a></li>
+  </ul>
+</li>
+        <!-- ✅ Book Appointment Button (visible in nav on mobile) -->
+        <li class="nav-item mt-2 mt-lg-0">
+          <a href="appointment.php" class="btn-book nav-link px-3">
+            <i class="bi bi-calendar-check"></i> Book
+          </a>
+        </li>
+        
+        <li class="nav-item"><a class="nav-link" href="inquiry.php">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.php">Careers</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</nav>
+
+<!-- About Section -->
+<section class="section bg-white">
+  <div class="container">
+    <div class="row align-items-center g-5"> <!-- g-5 adds better spacing -->
+      <!-- Text Column -->
+      <div class="col-md-6 order-md-1 order-2">
+        <h2 class="mb-4" style="color: var(--logo-primary); font-weight: 600;">About Dental Clinic </h2>
+        <p>Located in (Clinic's Address), Dental Clinic is committed to providing quality dental care with a focus on patient comfort, hygiene, and efficiency.</p>
+        <p>We understand that visiting the dentist can be stressful, which is why we’ve created a welcoming environment and a streamlined process to make your experience as smooth as possible.</p>
+        <p>Our clinic uses a modern, web-based management system to automate appointments, billing, and communication — reducing wait times and improving service accuracy.</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--logo-primary);"></i> No more double-booking</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--logo-primary);"></i> Secure online payments (GCash/PayPal)</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--logo-primary);"></i> Easy online booking (no login required)</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill me-2" style="color: var(--logo-primary);"></i> Direct communication via inquiry form</li>
+        </ul>
+      </div>
+
+      <!-- Image Column -->
+      <div class="col-md-6 order-md-2 order-1">
+     <img src="assets/Gallery/DC_Main2.png" 
+     class="img-fluid shadow-sm"
+     style="margin: -20px; /* Adjust based on your transparent padding */
+            width: calc(100% + 40px); /* Compensate for negative margin */
+            background: transparent;">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Mission & Vision -->
+<section class="section bg-light" id="mission">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5><i class="bi bi-compass"></i> Mission</h5>
+            <p>To provide accessible, high-quality dental care using modern technology and compassionate service.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" id="vision">
+        <div class="card">
+          <div class="card-body">
+            <h5><i class="bi bi-eye"></i> Vision</h5>
+            <p>To be the most trusted dental clinic in Tagum City through excellence in care and innovation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Our Team -->
+<section class="section bg-white" id="team">
+  <div class="container">
+    <h2 class="text-center mb-5" style="color: var(--logo-primary);">Our Team</h2>
+    <div class="row">
+      
+      <!-- Dr. R.L. Anino -->
+      <div class="col-md-4 text-center" id="dentist">
+        <img src="assets/Icon/Green_profile.jpg" alt="Dr. R.L. Anino" class="rounded-circle mb-3 shadow" width="120">
+        <h5>(Doctor's Name)</h5>
+        <p class="text-muted">Clinic Owner & Lead Dentist</p>
+      </div>
+
+      <!-- Maria Santos -->
+      <div class="col-md-4 text-center" id="receptionist">
+        <img src="assets/Icon/Green_profile.jpg" alt="Dr. R.L. Anino" class="rounded-circle mb-3 shadow" width="120">
+        <h5>(Receptionist's Name)</h5>
+        <p class="text-muted">Receptionist</p>
+      </div>
+
+      <!-- John Cruz -->
+      <div class="col-md-4 text-center" id="assistant">
+        <img src="assets/Icon/Green_profile.jpg" alt="Dr. R.L. Anino" class="rounded-circle mb-3 shadow" width="120">
+        <h5>(Dental Assistant's Name)</h5>
+        <p class="text-muted">Dental Assistant</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Patient Care -->
+<section class="section bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" id="comfort">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5><i class="bi bi-heart"></i> Patient Comfort</h5>
+            <p>We prioritize your comfort with a calming environment and gentle care.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6" id="technology">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5><i class="bi bi-laptop"></i> Modern Technology</h5>
+            <p>Our web-based system streamlines appointments, billing, and communication.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="text-center">
+        <p class="mb-1">&copy; 2025 Dental Clinic's Website. All rights reserved.</p>
+      
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const img = document.querySelector('img[src*="DC_Main2.png"]');
+  if (img) {
+    img.onload = () => {
+      console.log('Natural size:', img.naturalWidth, 'x', img.naturalHeight);
+      console.log('Displayed size:', img.clientWidth, 'x', img.clientHeight);
+      // If natural size >> visible content, you have transparent padding
+    };
+  }
+});
+</script>
+
+</body>
+</html>

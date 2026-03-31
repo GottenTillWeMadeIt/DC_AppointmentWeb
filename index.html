@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R.L. Anino Dental Clinic | Quality Care in Tagum City</title>
+
+  <!-- ✅ Fixed: lowercase <link> tags -->
+  <link rel="icon" type="image/x-icon" href="assets/Icon/favicon02.ico">
+  <link rel="icon" type="image/png" href="assets/Icon/DC_MLogo.png">
+  <link rel="apple-touch-icon" href="assets/Icon/DC_MLogo.png">
+
+  <!-- Bootstrap & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Minimal Critical CSS (ensures layout works even if style.css fails) -->
+  <style>
+    :root {
+      --logo-primary: #008080;
+      --logo-primary-light: #e0f7f7;
+      --logo-accent: #006666;
+      --text-dark: #333333;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(135deg, var(--logo-primary-light), #c0e8e8);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Hero Carousel - Mobile First */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 500px;
+      max-height: 900px;
+      overflow: hidden;
+    }
+    .hero .carousel-item {
+      height: 100%;
+    }
+    .hero .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    .carousel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,102,102,0.8), rgba(0,128,128,0.65));
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .hero-content h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .hero-content .lead {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      margin-bottom: 2rem;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    }
+    /* Buttons - Hover + Cursor */
+    .btn-book {
+      background: var(--logo-primary);
+      color: white !important;
+      padding: 14px 36px;
+      font-weight: 600;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(0,128,128,0.4);
+      transition: all 0.25s ease;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+    }
+    .btn-book:hover {
+      background: var(--logo-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(0,102,102,0.5);
+      color: white !important;
+    }
+    /* Ensure ALL clickable elements show hand cursor */
+    a[href], button, [role="button"], .nav-link, .dropdown-item {
+      cursor: pointer;
+    }
+    /* Mobile navbar text */
+    @media (max-width: 767px) {
+      .navbar-brand span {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+      .hero-content {
+        padding-top: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ✅ Navbar: Simple, Responsive, Working -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    
+    <!-- Brand: Logo + Clinic Name (responsive) -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/Icon/DC_MLogo.png" alt="Logo" width="40" height="40" class="me-2">
+      <!-- Short on mobile, full on desktop -->
+      <span class="fw-bold text-teal d-inline d-md-none">Dental Clinic</span>
+      <span class="fw-bold text-teal d-none d-md-inline">Dental Clinic Appointment System</span>
+    </a>
+
+    <!-- Hamburger Toggle -->
+    <button 
+      class="navbar-toggler border-0" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        
+        <!-- About Dropdown (unchanged) -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown">
+    About Us
+  </a>
+  <ul class="dropdown-menu border-0 shadow-sm">
+    <li><h6 class="dropdown-header">Clinic Overview</h6></li>
+    <li><a class="dropdown-item" href="about.html">Our Story</a></li>
+    <li><a class="dropdown-item" href="about.html#mission">Mission</a></li>
+    <li><a class="dropdown-item" href="about.html#vision">Vision</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header">Our Team</h6></li>
+    <li><a class="dropdown-item" href="about.html#dentist">Dr. R.L. Anino</a></li>
+    <li><a class="dropdown-item" href="about.html#receptionist">Maria Santos</a></li>
+  </ul>
+</li>
+
+<!-- ✅ Services Dropdown (Now Matches About Us Style) -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown">
+    Services
+  </a>
+  <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navbarDropdownServices">
+    <li><h6 class="dropdown-header"><i class="bi bi-brush me-1"></i> Preventive Care</h6></li>
+    <li><a class="dropdown-item" href="services.html#dental-cleaning">Dental Cleaning</a></li>
+    <li><a class="dropdown-item" href="services.html#dental-checkup">Dental Check-Up</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header"><i class="bi bi-tooth me-1"></i> Restorative Care</h6></li>
+    <li><a class="dropdown-item" href="services.html#tooth-filling">Tooth Filling</a></li>
+    <li><a class="dropdown-item" href="services.html#tooth-extraction">Tooth Extraction</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header"><i class="bi bi-brightness-high me-1"></i> Cosmetic & Orthodontic</h6></li>
+    <li><a class="dropdown-item" href="services.html#teeth-whitening">Teeth Whitening</a></li>
+    <li><a class="dropdown-item" href="services.html#orthodontic">Orthodontic Treatment</a></li>
+  </ul>
+</li>
+        <!-- ✅ Book Appointment Button (visible in nav on mobile) -->
+        <li class="nav-item mt-2 mt-lg-0">
+          <a href="appointment.php" class="btn-book nav-link px-3">
+            <i class="bi bi-calendar-check"></i> Book
+          </a>
+        </li>
+        
+        <li class="nav-item"><a class="nav-link" href="inquiry.php">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.php">Careers</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</nav>
+
+<!-- ✅ Hero Carousel: Mobile-Optimized -->
+<section class="hero">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+    
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://placehold.co/1920x1080/008080/FFFFFF?text=Modern+Clinic+Interior" 
+             class="d-block w-100" alt="Modern clinic interior">
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/1920x1080/e0f7f7/008080?text=Professional+Dentist" 
+             class="d-block w-100" alt="Professional dentist at work">
+      </div>
+      <div class="carousel-item">
+        <img src="https://placehold.co/1920x1080/006666/FFFFFF?text=Happy+Patient" 
+             class="d-block w-100" alt="Happy patient smiling">
+      </div>
+    </div>
+
+    <!-- Overlay for text readability -->
+    <div class="carousel-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="hero-content">
+        <h1>Quality Dental Care in Your Neighborhood</h1>
+        <p class="lead">Book your appointment online — no login required.</p>
+        <a href="appointment.php" class="btn-book btn-lg">
+          <i class="bi bi-calendar-check"></i> Book Appointment
+        </a>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section bg-light py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-teal">Our Services</h2>
+      <p class="lead">Comprehensive dental care for the whole family</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm service-card">
+          <div class="card-body text-center p-4">
+            <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3 bg-teal-light" 
+                 style="width: 70px; height: 70px; background: var(--logo-primary-light);">
+              <span style="font-size: 2rem;">🦷</span>
+            </div>
+            <h5 class="mb-2 fw-bold">Tooth Extraction</h5>
+            <p class="text-muted small">Safe and painless removal of damaged teeth.</p>
+            <span class="badge bg-teal text-white px-3 py-2 rounded-pill">₱2,500</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm service-card">
+          <div class="card-body text-center p-4">
+            <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3 bg-teal-light" 
+                 style="width: 70px; height: 70px; background: var(--logo-primary-light);">
+              <span style="font-size: 2rem;">🖌️</span>
+            </div>
+            <h5 class="mb-2 fw-bold">Dental Cleaning</h5>
+            <p class="text-muted small">Professional cleaning to prevent gum disease.</p>
+            <span class="badge bg-teal text-white px-3 py-2 rounded-pill">₱1,200</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 border-0 shadow-sm service-card">
+          <div class="card-body text-center p-4">
+            <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3 bg-teal-light" 
+                 style="width: 70px; height: 70px; background: var(--logo-primary-light);">
+              <span style="font-size: 2rem;">📋</span>
+            </div>
+            <h5 class="mb-2 fw-bold">Orthodontic Treatment</h5>
+            <p class="text-muted small">Braces and alignment correction.</p>
+            <span class="badge bg-teal text-white px-3 py-2 rounded-pill">₱3,500/session</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section bg-white py-5">
+  <div class="container">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6 order-2 order-lg-1">
+        <h2 class="mb-3 text-teal fw-bold">Welcome to Dental Clinic</h2>
+        <p class="mb-3">Located in Tagum City, we provide quality dental care with a focus on patient comfort, hygiene, and efficiency.</p>
+        
+        <ul class="list-unstyled mb-4">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-teal me-2"></i> No more double-booking</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-teal me-2"></i> Secure online payments (GCash/PayPal)</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-teal me-2"></i> Easy online booking (no login)</li>
+          <li><i class="bi bi-check-circle-fill text-teal me-2"></i> Direct communication via inquiry form</li>
+        </ul>
+        
+        <a href="about.html" class="btn-book">
+          <i class="bi bi-arrow-right-circle me-2"></i> Learn More
+        </a>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 text-center">
+        <img src="assets/Gallery/DC_MAIN.png" 
+             alt="R.L. Anino Dental Clinic Interior" 
+             class="img-fluid rounded shadow" 
+             style="max-width: 100%; height: auto; border: 3px solid var(--logo-primary-light);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inquiry CTA -->
+<section class="section bg-light py-5 text-center">
+  <div class="container">
+    <h2 class="mb-3">Have Questions?</h2>
+    <p class="lead mb-4">Send us a message and we'll get back to you via email.</p>
+    <a href="inquiry.php" class="btn-book btn-lg">
+      <i class="bi bi-envelope me-2"></i> Send Inquiry
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4 mt-auto">
+  <div class="container text-center">
+    <p class="mb-1">&copy; 2025 R.L. Anino Dental Clinic. All rights reserved.</p>
+    <p class="small mb-3">Tagum City, Philippines | <a href="inquiry.php" class="text-white-50">Contact Us</a></p>
+    <div class="d-flex justify-content-center gap-3">
+      <a href="#" class="text-white-50 hover-white" aria-label="Facebook"><i class="bi bi-facebook fs-5"></i></a>
+      <a href="#" class="text-white-50 hover-white" aria-label="Instagram"><i class="bi bi-instagram fs-5"></i></a>
+      <a href="mailto:clinic@example.com" class="text-white-50 hover-white" aria-label="Email"><i class="bi bi-envelope fs-5"></i></a>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+
+<!-- Minimal JS: Ensure buttons work + close mobile menu on link click -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Close mobile menu when a nav link is clicked
+  document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)').forEach(link => {
+    link.addEventListener('click', () => {
+      const collapse = document.querySelector('.navbar-collapse');
+      if (collapse.classList.contains('show')) {
+        bootstrap.Collapse.getInstance(collapse).hide();
+      }
+    });
+  });
+  
+  // Ensure all buttons show hand cursor (backup for CSS)
+  document.querySelectorAll('a[href], button, [role="button"]').forEach(el => {
+    el.style.cursor = 'pointer';
+  });
+});
+</script>
+
+</body>
+</html>

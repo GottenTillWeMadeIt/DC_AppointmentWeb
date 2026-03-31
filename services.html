@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services - Dental Clinic </title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/Icon/DC_MLogo.png">
+  <link rel="apple-touch-icon" href="assets/Icon/DC_MLogo.png">
+
+  <!-- CSS - Fixed: Removed extra spaces in URLs -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+   <style>
+    /* Sticky Footer Styles */
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      margin-top: auto;
+      background-color: #333;
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .policy-box {
+      background-color: #f8f9fa;
+      border-left: 4px solid #008080;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+  </style>
+
+ 
+
+<!-- ✅ Navbar: Simple, Responsive, Working -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    
+    <!-- Brand: Logo + Clinic Name (responsive) -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="assets/Icon/DC_MLogo.png" alt="Logo" width="40" height="40" class="me-2">
+      <!-- Short on mobile, full on desktop -->
+      <span class="fw-bold text-teal d-inline d-md-none">Dental Clinic</span>
+      <span class="fw-bold text-teal d-none d-md-inline">Dental Clinic Appointment System</span>
+    </a>
+
+    <!-- Hamburger Toggle -->
+    <button 
+      class="navbar-toggler border-0" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        
+        <!-- About Dropdown (unchanged) -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-bs-toggle="dropdown">
+    About Us
+  </a>
+  <ul class="dropdown-menu border-0 shadow-sm">
+    <li><h6 class="dropdown-header">Clinic Overview</h6></li>
+    <li><a class="dropdown-item" href="about.html">Our Story</a></li>
+    <li><a class="dropdown-item" href="about.html#mission">Mission</a></li>
+    <li><a class="dropdown-item" href="about.html#vision">Vision</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header">Our Team</h6></li>
+    <li><a class="dropdown-item" href="about.html#dentist">Dr. R.L. Anino</a></li>
+    <li><a class="dropdown-item" href="about.html#receptionist">Maria Santos</a></li>
+  </ul>
+</li>
+
+<!-- ✅ Services Dropdown (Now Matches About Us Style) -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownServices" role="button" data-bs-toggle="dropdown">
+    Services
+  </a>
+  <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navbarDropdownServices">
+    <li><h6 class="dropdown-header"><i class="bi bi-brush me-1"></i> Preventive Care</h6></li>
+    <li><a class="dropdown-item" href="services.html#dental-cleaning">Dental Cleaning</a></li>
+    <li><a class="dropdown-item" href="services.html#dental-checkup">Dental Check-Up</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header"><i class="bi bi-tooth me-1"></i> Restorative Care</h6></li>
+    <li><a class="dropdown-item" href="services.html#tooth-filling">Tooth Filling</a></li>
+    <li><a class="dropdown-item" href="services.html#tooth-extraction">Tooth Extraction</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header"><i class="bi bi-brightness-high me-1"></i> Cosmetic & Orthodontic</h6></li>
+    <li><a class="dropdown-item" href="services.html#teeth-whitening">Teeth Whitening</a></li>
+    <li><a class="dropdown-item" href="services.html#orthodontic">Orthodontic Treatment</a></li>
+  </ul>
+</li>
+        <!-- ✅ Book Appointment Button (visible in nav on mobile) -->
+        <li class="nav-item mt-2 mt-lg-0">
+          <a href="appointment.php" class="btn-book nav-link px-3">
+            <i class="bi bi-calendar-check"></i> Book
+          </a>
+        </li>
+        
+        <li class="nav-item"><a class="nav-link" href="inquiry.php">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.php">Careers</a></li>
+      </ul>
+    </div>
+    
+  </div>
+</nav>
+
+  <!-- Services Section -->
+  <section class="section">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: var(--logo-primary);">Our Dental Services</h2>
+      <p class="text-center lead mb-5">We offer a range of dental treatments to keep your smile healthy and bright.</p>
+
+      <div class="row">
+        <div class="col-md-6 mb-4" id="dental-cleaning">
+          <div class="card">
+            <div class="card-body">
+              <i class="bi bi-brush" style="font-size: 2.5rem; color: var(--logo-primary);"></i>
+              <h5 class="mt-3">Dental Cleaning</h5>
+              <p>Professional cleaning to remove plaque and tartar, preventing gum disease and cavities.</p>
+              <strong>₱1,200.00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4" id="dental-checkup">
+          <div class="card">
+            <div class="card-body">
+              <i class="bi bi-person-check" style="font-size: 2.5rem; color: var(--logo-primary);"></i>
+              <h5 class="mt-3">Dental Check-Up</h5>
+              <p>Comprehensive examination to assess oral health and recommend treatment plans.</p>
+              <strong>₱500.00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4" id="tooth-filling">
+          <div class="card">
+            <div class="card-body">
+              <i class="bi bi-capsule" style="font-size: 2.5rem; color: var(--logo-primary);"></i>
+              <h5 class="mt-3">Tooth Filling</h5>
+              <p>Repair of decayed or damaged teeth using durable, tooth-colored materials.</p>
+              <strong>₱1,800.00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4" id="tooth-extraction">
+          <div class="card">
+            <div class="card-body">
+              <i class="bi bi-tooth" style="font-size: 2.5rem; color: var(--logo-primary);"></i>
+              <h5 class="mt-3">Tooth Extraction</h5>
+              <p>Safe and painless removal of damaged or decayed teeth. Local anesthesia is used for comfort.</p>
+              <strong>₱2,500.00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4" id="teeth-whitening">
+          <div class="card">
+            <div class="card-body">
+              <i class="bi bi-brightness-high" style="font-size: 2.5rem; color: var(--logo-primary);"></i>
+              <h5 class="mt-3">Teeth Whitening</h5>
+              <p>Professional whitening treatment for a brighter, more confident smile.</p>
+              <strong>₱2,000.00</strong>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4" id="orthodontic">
+          <div class="card">
+            <div class="card-body">
+              <i class="bi bi-clipboard2-pulse" style="font-size: 2.5rem; color: var(--logo-primary);"></i>
+              <h5 class="mt-3">Orthodontic Treatment</h5>
+              <p>Braces and alignment correction for straighter teeth and better bite function.</p>
+              <strong>₱3,500.00 / session</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section bg-light">
+    <div class="container text-center">
+      <h2>Ready to Schedule?</h2>
+      <p class="lead">Book your appointment today — no login required.</p>
+      <a href="appointment.php" class="btn btn-primary btn-lg">Book Now</a>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="text-center">
+        <p class="mb-1">&copy; 2025 Dental Clinic's Website. All rights reserved.</p>
+      
+    </div>
+    </div>
+  </footer>
+
+  <!-- Fixed: Removed extra spaces in script URL -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
