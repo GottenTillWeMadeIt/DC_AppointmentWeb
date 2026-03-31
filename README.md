@@ -44,7 +44,7 @@ Homepage Preview
 
 Note:** *Add your screenshot to `assets/Screenshots/homepage.png` and update the path below.*
 
-![Homepage Preview](assets/Screenshots/homepage.png)
+![Homepage Preview](assets/screenshots/Homepage.jpg)
 
 **Device Compatibility:**
 - **Mobile:** Hamburger menu, stacked layout, touch-friendly buttons.
