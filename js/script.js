@@ -1,8 +1,3 @@
-/**
- * R.L. Anino Dental Clinic - Main JavaScript
- * Handles: navbar, forms, smooth scroll, UI interactions
- * Compatible with: Bootstrap 5.3+, PHP/MySQL backend
- */
 
 document.addEventListener('DOMContentLoaded', function () {
   initNavbar();
