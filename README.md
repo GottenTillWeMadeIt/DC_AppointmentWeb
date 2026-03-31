@@ -67,3 +67,30 @@ Tech Stack
 
 Project Structure
 
+## 📁 Project Structure
+
+### 📄 Main Files
+| File | Description |
+|------|-------------|
+| `index.html` | Homepage with hero carousel and service preview |
+| `about.html` | About Us page (Mission, Vision, Team, Clinic Info) |
+| `services.html` | Full service catalog with pricing |
+| `appointment.php` | Appointment booking form |
+| `careers.php` | Job application form with resume upload |
+| `contact.php` | Contact/Inquiry form |
+| `database.sql` | MySQL database schema and sample data |
+| `.gitignore` | Git ignore configuration |
+| `README.md` | Project documentation |
+
+### 📁 Folders
+| Folder | Purpose | Key Files |
+|--------|---------|-----------|
+| **assets/Gallery/** | Clinic photos | DC_MAIN.png, team photos |
+| **assets/Icon/** | Logos & branding | DC_MLogo.png, favicon.ico |
+| **assets/Slider/** | Hero carousel | slide1.jpg, slide2.jpg, slide3.jpg |
+| **assets/Background/** | Section backgrounds | bg-pattern.png |
+| **assets/Screenshots/** | README images | homepage.png |
+| **css/** | Stylesheets | style.css (responsive design) |
+| **js/** | JavaScript | script.js (validation, UI) |
+| **php/** | Backend logic | db_connect.php, form handlers |
+| **uploads/** | User files | Applicant resumes (PDF/DOCX) |
