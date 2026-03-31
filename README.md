@@ -41,9 +41,6 @@ Backend Functionality
 ---
 
 Homepage Preview
-
-Note:** *Add your screenshot to `assets/Screenshots/homepage.png` and update the path below.*
-
 ![Homepage Preview](assets/screenshots/Homepage.jpg)
 
 **Device Compatibility:**
