@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8" />
@@ -119,13 +117,13 @@
 </li>
         <!-- ✅ Book Appointment Button (visible in nav on mobile) -->
         <li class="nav-item mt-2 mt-lg-0">
-          <a href="appointment.php" class="btn-book nav-link px-3">
+          <a href="appointment.html" class="btn-book nav-link px-3">
             <i class="bi bi-calendar-check"></i> Book
           </a>
         </li>
         
-        <li class="nav-item"><a class="nav-link" href="inquiry.php">Contact</a></li>
-        <li class="nav-item"><a class="nav-link" href="careers.php">Careers</a></li>
+        <li class="nav-item"><a class="nav-link" href="inquiry.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="careers.html">Careers</a></li>
       </ul>
     </div>
     
